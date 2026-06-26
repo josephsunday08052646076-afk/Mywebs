@@ -3,61 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sportiva ⚽</title>
+  <title>Sportiva ⚽ | World Cup 2026</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: #0a0f1c;
       color: white;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
+      line-height: 1.6;
     }
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      padding: 50px 30px;
+    header {
+      background: linear-gradient(135deg, #ff7e00, #ff3c00);
+      padding: 60px 20px;
       text-align: center;
-      max-width: 400px;
-      width: 100%;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     }
-    h1 { 
-      font-size: 38px; 
-      margin-bottom: 12px; 
-      font-weight: 800;
-    }
-    p { 
-      font-size: 16px; 
-      color: #d1d5db; 
-      margin-bottom: 25px;
-    }
-    button {
-      background: linear-gradient(90deg, #ff7e00, #ff3c00);
+    header h1 { font-size: 40px; font-weight: 900; }
+    header p { font-size: 18px; margin: 10px 0 20px; }
+    .btn {
+      background: white;
+      color: #ff3c00;
       border: none;
-      padding: 14px 28px;
+      padding: 14px 26px;
       font-size: 16px;
       border-radius: 12px;
-      color: white;
       font-weight: bold;
       cursor: pointer;
-      transition: transform 0.2s;
     }
-    button:active {
-      transform: scale(0.95);
+    .container { max-width: 700px; margin: 0 auto; padding: 30px 20px; }
+    .card {
+      background: #1a2233;
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 15px;
+      border: 1px solid #2a3447;
     }
+    .card h3 { color: #ff7e00; margin-bottom: 8px; }
+    footer { text-align: center; padding: 30px; color: #aaa; font-size: 14px; }
   </style>
 </head>
 <body>
-  <div class="card">
+  <header>
     <h1>Sportiva ⚽</h1>
-    <p>World Cup 2026 News & Football Updates</p>
-    <button>Get Started</button>
+    <p>Your Home for World Cup 2026 News, Scores & Updates</p>
+    <button class="btn">Get Match Alerts</button>
+  </header>
+
+  <div class="container">
+    <h2 style="margin-bottom: 15px;">🔥 Latest Football News</h2>
+    
+    <div class="card">
+      <h3>World Cup 2026 Countdown: 287 Days</h3>
+      <p>USA, Mexico & Canada prepare to host the biggest tournament ever.</p>
+    </div>
+
+    <div class="card">
+      <h3>Transfer Rumors Heating Up</h3>
+      <p>Top stars linked to big moves before the World Cup season.</p>
+    </div>
+
+    <div class="card">
+      <h3>Join 500+ Fans</h3>
+      <p>Get daily updates straight to your phone. No spam.</p>
+    </div>
   </div>
+
+  <footer>
+    © 2026 Sportiva. Built for real football fans.
+  </footer>
 </body>
 </html>
