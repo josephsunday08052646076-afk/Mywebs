@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,31 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sportiva ⚽</title>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #0a0a0a;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
-      text-align: center;
-      padding: 60px 20px;
-      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-    h1 { font-size: 36px; margin-bottom: 10px; }
-    p { font-size: 18px; color: #ccc; }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 50px 30px;
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    h1 { 
+      font-size: 38px; 
+      margin-bottom: 12px; 
+      font-weight: 800;
+    }
+    p { 
+      font-size: 16px; 
+      color: #d1d5db; 
+      margin-bottom: 25px;
+    }
     button {
-      background: orange;
+      background: linear-gradient(90deg, #ff7e00, #ff3c00);
       border: none;
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 8px;
-      margin-top: 20px;
-      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 12px;
+      color: white;
       font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:active {
+      transform: scale(0.95);
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Sportiva ⚽</h1>
-  <p>World Cup 2026 News & Football Updates</p>
-  <button>Get Started</button>
+  <div class="card">
+    <h1>Sportiva ⚽</h1>
+    <p>World Cup 2026 News & Football Updates</p>
+    <button>Get Started</button>
+  </div>
 </body>
 </html>
