@@ -3,72 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sportiva ⚽ | World Cup 2026</title>
+  <title>Sportiva ⚽ | Football Hub 2026</title>
+  
+  <!-- PWA STUFF START -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ff6600">
+  <link rel="apple-touch-icon" href="https://i.imgur.com/8Km9tLL.png"> 
+  <!-- PWA STUFF END -->
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #0a0f1c;
-      color: white;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(135deg, #ff7e00, #ff3c00);
-      padding: 60px 20px;
-      text-align: center;
-    }
-    header h1 { font-size: 40px; font-weight: 900; }
-    header p { font-size: 18px; margin: 10px 0 20px; }
-    .btn {
-      background: white;
-      color: #ff3c00;
-      border: none;
-      padding: 14px 26px;
-      font-size: 16px;
-      border-radius: 12px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .container { max-width: 700px; margin: 0 auto; padding: 30px 20px; }
-    .card {
-      background: #1a2233;
-      border-radius: 16px;
-      padding: 20px;
-      margin-bottom: 15px;
-      border: 1px solid #2a3447;
-    }
-    .card h3 { color: #ff7e00; margin-bottom: 8px; }
-    footer { text-align: center; padding: 30px; color: #aaa; font-size: 14px; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f172a; color: #fff; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #ff6600, #ff3300); padding: 40px 20px; text-align: center; }
+    header h1 { font-size: 36px; font-weight: 900; }
+    header p { font-size: 16px; margin: 10px 0 20px; }
+    .btn { background: #fff; color: #ff6600; border: none; padding: 14px 24px; border-radius: 12px; font-weight: bold; cursor: pointer; }
+    nav { position: sticky; top: 0; background: #1e293b; display: flex; overflow-x: auto; padding: 12px 10px; gap: 15px; z-index: 10; }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; white-space: nowrap; padding: 8px 12px; border-radius: 8px; }
+    nav a:hover { background: #ff6600; }
+    .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+    .section-title { font-size: 22px; margin: 30px 0 15px; font-weight: 800; }
+    .card { background: #1e293b; border-radius: 16px; padding: 18px; margin-bottom: 15px; }
+    .card h3 { color: #ff6600; margin-bottom: 8px; }
+    iframe { width: 100%; height: 200px; border-radius: 12px; border: none; margin-top: 10px; }
+    footer { text-align: center; padding: 30px; color: #94a3b8; font-size: 14px; }
+    #installBtn { display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; background: #ff6600; color: #fff; border: none; padding: 14px 20px; border-radius: 50px; font-weight: 900; box-shadow: 0 4px 20px rgba(255,102,0,0.5); }
   </style>
 </head>
 <body>
+  <button id="installBtn">📲 Install App</button>
+
   <header>
     <h1>Sportiva ⚽</h1>
-    <p>Your Home for World Cup 2026 News, Scores & Updates</p>
+    <p>Your Home for World Cup 2026, LiveScores & Highlights</p>
     <button class="btn">Get Match Alerts</button>
   </header>
 
+  <nav>
+    <a href="#">Home</a>
+    <a href="#livescore">LiveScore</a>
+    <a href="#videos">Videos</a>
+    <a href="#highlights">Highlights</a>
+    <a href="#news">News</a>
+  </nav>
+
   <div class="container">
-    <h2 style="margin-bottom: 15px;">🔥 Latest Football News</h2>
-    
+    <h2 class="section-title" id="livescore">⚡ LiveScore</h2>
     <div class="card">
-      <h3>World Cup 2026 Countdown: 287 Days</h3>
-      <p>USA, Mexico & Canada prepare to host the biggest tournament ever.</p>
+      <h3>Premier League Live</h3>
+      <p>Man Utd 2 - 1 Arsenal | 78'</p>
+      <iframe src="https://www.livescore.com/en/football/"></iframe>
     </div>
 
+    <h2 class="section-title" id="videos">🎥 Latest Videos</h2>
     <div class="card">
-      <h3>Transfer Rumors Heating Up</h3>
-      <p>Top stars linked to big moves before the World Cup season.</p>
+      <h3>Last Match: UCL Final Goals</h3>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
     </div>
 
+    <h2 class="section-title" id="highlights">🔥 Highlights</h2>
     <div class="card">
-      <h3>Join 500+ Fans</h3>
-      <p>Get daily updates straight to your phone. No spam.</p>
+      <h3>Top 10 Goals This Week</h3>
+      <iframe src="https://www.youtube.com/embed/9bZkp7q19f0"></iframe>
     </div>
+
+    <h2 class="section-title" id="news">📰 Latest Football News</h2>
+    <div class="card"><h3>World Cup 2026 Countdown: 287 Days</h3><p>USA, Mexico & Canada prepare to host.</p></div>
+    <div class="card"><h3>Transfer Rumors Heating Up</h3><p>Top stars linked to big moves before WC.</p></div>
+    <div class="card"><h3>Mbappe Scores Hat-trick</h3><p>PSG star on fire ahead of qualifiers.</p></div>
+    <div class="card"><h3>Join 500+ Fans</h3><p>Get daily updates straight to your phone.</p></div>
   </div>
 
-  <footer>
-    © 2026 Sportiva. Built for real football fans.
-  </footer>
+  <footer>© 2026 Sportiva. Built for real football fans.</footer>
+
+<script>
+  // PWA Install Button Logic
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'block'; // Show the button
+  });
+  installBtn.addEventListener('click', () => {
+    installBtn.style.display = 'none';
+    deferredPrompt.prompt();
+  });
+
+  // Register Service Worker
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
 </body>
 </html>
